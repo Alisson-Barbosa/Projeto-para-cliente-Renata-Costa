@@ -92,7 +92,7 @@ int main()
 				    case 2:
 				    case 1:
 				    case 0:	
-						printf("O aluno ficou de RP!!");
+						printf("O aluno ficou Reprovado!!");
 						break;
 				}
 	    }
