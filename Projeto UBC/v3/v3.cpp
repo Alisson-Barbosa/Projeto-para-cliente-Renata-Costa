@@ -13,7 +13,7 @@ struct fda {
 	
 int main ()
 {
-	
+
 	struct fda info_aluno[100];
     int opcao;
     int i, numero_de_alunos = 0 ;
@@ -24,6 +24,8 @@ int main ()
 	int valido;
 	char rgm_str[20];
     
+
+
     printf("\n BEM VINDO AO CALCULO DE MEDIA PARA SEUS ALUNOS!!!\n");
     
 	do{
@@ -34,6 +36,9 @@ int main ()
         printf(" 4 - Remover aluno da lista;\n");
         printf(" 0 - Finalizar programa.\n");
         scanf("%d", &opcao);
+        
+		printf("\033[2J\033[H");
+		
 			switch (opcao) 
 		{
 			case 1:
@@ -98,6 +103,7 @@ int main ()
                 } else {
                     printf("Limite de alunos atingido.\n");
                 }
+                printf("\033[2J\033[H");
 				break;
 			case 2:
 				 printf("\n Lista de Alunos:\n");
@@ -230,7 +236,7 @@ int main ()
                 printf("Opcao invalida. Tente novamente.\n");
         }
 	}while (opcao != 0);
-	
+
 	return 0 ;
 	
 }

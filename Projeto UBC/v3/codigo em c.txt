@@ -13,10 +13,7 @@ struct fda {
 	
 int main ()
 {
-	system("color 1f");
-	printf("\033[38;2;255;165;0m");
 
-	
 	struct fda info_aluno[100];
     int opcao;
     int i, numero_de_alunos = 0 ;
