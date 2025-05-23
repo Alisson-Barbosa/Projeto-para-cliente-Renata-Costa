@@ -1,0 +1,94 @@
+Objetivo do Programa
+O programa é um sistema simples para gerenciamento de alunos, permitindo:
+
+Registrar alunos e suas notas.
+
+Calcular a média e verificar aprovação.
+
+Atualizar dados de um aluno.
+
+Remover um aluno da lista.
+
+1. Estrutura struct fda
+Define o formato dos dados de cada aluno:
+
+c
+Copy code
+struct fda {
+    char nome[50];
+    int rgm;
+    int a1;
+    int a2;
+    int af;
+};
+nome: Nome do aluno.
+
+rgm: Número de identificação.
+
+a1, a2, af: Notas das avaliações.
+
+2. Variáveis principais
+c
+Copy code
+struct fda info_aluno[100]; // Armazena até 100 alunos
+Outras variáveis:
+
+numero_de_alunos: controla quantos alunos estão cadastrados.
+
+opcao: controla o menu.
+
+rgm_str: armazena o RGM temporariamente como texto para validação.
+
+valido: usado para checar entradas válidas.
+
+3. Menu Principal
+Dentro de um loop do-while, o usuário escolhe uma das opções:
+
+c
+Copy code
+1 - Registrar aluno
+2 - Listar alunos
+3 - Atualizar aluno
+4 - Remover aluno
+0 - Sair
+4. Cadastro do Aluno (case 1)
+Valida o nome para conter apenas letras com isalpha().
+
+Valida o RGM para conter apenas números com isdigit() e converte com atoi().
+
+Verifica se as notas estão entre 1 e 5 (ou 0 para AF).
+
+5. Listagem de Alunos (case 2)
+Calcula a média de A1 e A2.
+
+Se a média < 6, usa a AF e a maior nota entre A1 e A2 para tentar aprovar.
+
+Classifica o aluno como:
+
+Aprovado
+
+Aprovado com uso de AF
+
+Reprovado com uso de AF
+
+Imprime nome, RGM, média e status.
+
+6. Atualização de Aluno (case 3)
+Solicita o RGM.
+
+Se encontrado, permite atualizar nome, RGM e notas com as mesmas validações do cadastro.
+
+7. Remoção de Aluno (case 4)
+Solicita o RGM.
+
+Se encontrado, remove o aluno deslocando os elementos no array.
+
+8. Finalização (case 0)
+Encerra o programa.
+
+Validações importantes
+Uso de isalpha() para garantir nomes com letras.
+
+Uso de isdigit() e atoi() para garantir RGM numérico.
+
+Limites das notas com mensagens de erro.

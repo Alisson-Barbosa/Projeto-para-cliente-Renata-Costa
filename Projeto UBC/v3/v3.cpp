@@ -104,7 +104,7 @@ int main ()
                 for (i = 0; i < numero_de_alunos; i++) {
                     media = (info_aluno[i].a1 + info_aluno[i].a2);
                     if (media < 6) {
-                        if ( info_aluno[i].a1 >> info_aluno[i].a2){
+                        if ( info_aluno[i].a1 > info_aluno[i].a2){
                         	media = (info_aluno[i].a1 + info_aluno[i].af);
                         	if (media >= 6) {
 	                        strcpy(status_de_aprovacao, "Aprovado com uso de af");
